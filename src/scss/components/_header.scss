@@ -46,3 +46,86 @@
     display: flex;
     align-items: flex-end;
 }
+
+.lnr-alarm {
+    color: rgb(126, 143, 161);
+}
+
+.lnr-alarm::after {
+    content: '25';
+    color: white;
+    background-color: rgb(255, 106, 108);
+    position: absolute;
+    top: 24px;
+    width: 26px;
+    height: 22px;
+    z-index: 2;
+}
+
+.lnr-envelope::before {
+    content: '6';
+    color: white;
+    background-color: greenyellow;
+    position: absolute;
+    top: 24px;
+    width: 26px;
+    height: 22px;
+    z-index: 2;
+}
+
+.lnr-cart::before {
+    content: '2';
+    color: white;
+    background-color: rgb(6, 116, 236);
+    position: absolute;
+    top: 24px;
+    width: 26px;
+    height: 22px;
+    z-index: 2;
+}
+
+.header__img {
+    border-radius: 50%;
+    background-color: rgb(124, 121, 121);
+    position: relative;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.header__user__content__name {
+    font-size: 16px;
+    font-family: "Quicksand";
+    color: rgb(51, 51, 51);
+}
+
+.header__user__content__money {
+    color: rgb(6, 116, 236);
+    font-size: 16px;
+    font-family: "Quicksand";
+}
+
+.header__menu {
+    font-size: 15px;
+    font-family: "Myriad Pro";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start;
+    width: 420px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.header__form {
+    background-color: #fff;
+}
+
+.header__form::after {
+    content: '';
+    background-color: rgb(6, 116, 236);
+    width: 70px;
+    height: 46px;
+    border-radius: 50%;
+}
