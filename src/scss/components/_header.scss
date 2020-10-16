@@ -1,12 +1,12 @@
-.container {
-    margin: 0 auto;
-    width: 1730px;
-    padding: 0 15px;
-}
-
 .header--grey {
     background-color: #eef1f3;
-    max-height: 100px;
+    height: 100px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1170px;
+    padding: 0 15px;
 }
 
 .header__logo::before {
@@ -18,14 +18,14 @@
 
 .header__logo {
     font-size: 30px;
-    font-family: "Myriad Pro";
+    font-family: 'Quicksand Bold', sans-serif;
     color: #000;
     text-align: left;
 }
 
 .header__logo--blue {
     font-size: 30px;
-    font-family: "Myriad Pro";
+    font-family: 'Quicksand Bold', sans-serif;
     color: #0674ec;
 }
 
