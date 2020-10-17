@@ -5,7 +5,7 @@
 
 .container {
     margin: 0 auto;
-    width: 1170px;
+    max-width: 1170px;
     padding: 0 15px;
 }
 
@@ -18,7 +18,8 @@
 
 .header__logo {
     font-size: 30px;
-    font-family: 'Quicksand Bold', sans-serif;
+    line-height: 28px;
+    font-family: 'Quicksand Bold';
     color: #000;
     text-align: left;
 }
