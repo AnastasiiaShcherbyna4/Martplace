@@ -5,213 +5,144 @@
     }
 
     &__logo {
-        padding-left: 15px;
+        
     }
 
-    &__counter {
-        position: absolute;
-    }
-}
-
-
-
-
-/* .header__logo__img {
-    content: "";
-    background-image: url(../images/logo.svg);
-    display: inline-block;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 25px;
-    left: 20px;
-
-
-    .header__button {
+    &__link {
         background-color: #0674ec;
-        border-color: #0674ec;
         width: 140px;
         height: 36px;
         color: #fff;
-        font-family: 'Quicksand Regular'sans-serif;
+        font-family: 'Quicksand'sans-serif;
         font-size: 14px;
         text-align: center;
         border-radius: 22px;
         display: inline-block;
-        position: absolute;
-        top: 36px;
-        margin-left: 470px;
+        padding-top: 10px;
+        margin-top: 32px;
     }
 
-    .header__flex__container {
+    &__icons {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        position: relative;
-        width: 220px;
     }
 
-    .header__icons {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        justify-content: flex-end;
-        align-items: flex-end;
-        right: -630px;
-        top: -70px;
-    }
-
-    .lnr {
-        position: relative;
-    }
-
-    .lnr-alarm {
-        color: rgb(126, 143, 161);
-        font-size: 20px;
-        font-family: "Linearicons";
-        top: 46px;
-    }
-
-    .lnr-envelope {
-        color: rgb(126, 143, 161);
-        font-size: 20px;
-        font-family: "Linearicons";
-        top: 46px;
-    }
-
-    .lnr-cart {
-        color: rgb(126, 143, 161);
-        font-size: 20px;
-        font-family: "Linearicons";
-        top: 46px;
-    }
-
-    .lnr-alarm::after {
-        content: '25';
+    &__counter {
         color: white;
+        border-radius: 50%;
+        position: absolute;
+        text-align: center;
+        padding: 4px;
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+        font-family: "Quicksand";
+    }
+
+    &__counter--red {
         background-color: rgb(255, 106, 108);
-        border-radius: 50%;
-        position: absolute;
-        text-align: center;
-        padding: 4px;
-        top: -16px;
-        left: 8px;
-        width: 22px;
-        height: 22px;
-        z-index: 2;
-        font-size: 14px;
-        font-family: "Quicksand";
     }
 
-    .lnr-envelope::after {
-        content: '6';
-        color: white;
+    &__counter--green {
         background-color: #62d03b;
-        border-radius: 50%;
-        position: absolute;
-        text-align: center;
-        padding: 4px;
-        top: -16px;
-        width: 22px;
-        height: 22px;
-        z-index: 2;
-        font-size: 14px;
-        font-family: "Quicksand";
     }
 
-    .lnr-cart::after {
-        content: '2';
-        color: white;
+    &__counter--blue {
         background-color: #0674ec;
-        border-radius: 50%;
+    }
+
+    &__bottom {
+        height: 80px;
+    }
+
+    &__search {
+    }
+
+    &__search-button {
         position: absolute;
-        text-align: center;
-        padding: 4px;
-        top: -16px;
-        left: 13px;
-        width: 22px;
-        height: 22px;
-        z-index: 2;
-        font-size: 14px;
-        font-family: "Quicksand";
+        background-color: #0674ec;
+        width: 70px;
+        border-radius: 22px;
+        height: 46px;
+        font-size: 15px;
+        border-color: #0674ec;
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        line-height: 2;
     }
 
-    .lnr-alarm,
-    .lnr-cart,
-    .lnr-envelope {
-        padding-right: 30px;
-    }
+}
 
-    .header__img {
-        border-radius: 50%;
-        background-color: rgb(124, 121, 121);
-        position: absolute;
-        top: -40px;
-        width: 50px;
-        height: 50px;
-        right: -666px;
-        display: inline-block;
-    }
+.lnr {
+    color: rgb(126, 143, 161);
+    font-size: 20px;
+    font-family: "Linearicons";
+}
 
-    .header__user__content {
+.user {
+
+    &__info {
         display: flex;
         align-items: flex-end;
         flex-direction: column;
         margin-right: 15px;
-        position: relative;
-        top: -56px;
     }
 
-    .header__user__content__name {
-        font-size: 16px;
-        font-family: "Quicksand Bold";
-        color: rgb(51, 51, 51);
-        padding-bottom: 5px;
-    }
-
-    .header__user__content__money {
-        color: rgb(6, 116, 236);
+    &__name {
         font-size: 16px;
         font-family: "Quicksand";
-        padding-right: 57px;
+        color: #333333;
+        font-weight: 700;
     }
 
-    .header__menu {
-        font-size: 15px;
-        font-family: "Quicksand Bold";
-        color: rgb(51, 51, 51);
-        text-transform: uppercase;
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        padding-left: 15px;
-        padding-top: 35px;
-        padding-bottom: 35px;
+    &__balance {
+        color: #0674ec;
+        font-size: 16px;
+        font-family: "Quicksand";
+        font-weight: 400;
     }
 
-    .header__menu__item {
+    &__avatar {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.menu {
+    font-size: 15px;
+    font-family: "Quicksand";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-top: 35px;
+    list-style-type: none;
+
+    &__link {
+        color: #333333;
         margin-right: 25px;
     }
+}
 
-    input[type=search] {
-        background-color: #fff;
-        position: absolute;
-        border: 1px, rgb(217, 223, 229), solid;
-        border-radius: 20px;
-        top: 120px;
-        width: 358px;
-        height: 44px;
-        right: 25px;
-        font-size: 15px;
-        font-family: "Quicksand";
-        color: rgb(137, 143, 150);
-        line-height: 2;
-        padding-left: 25px;
-    }
+input[type=search] {
+    background-color: #fff;
+    border: 1px, rgb(217, 223, 229), solid;
+    border-radius: 20px;
+    width: 358px;
+    height: 44px;
+    font-size: 15px;
+    font-family: "Quicksand";
+    color: rgb(137, 143, 150);
+    line-height: 2;
+    padding-left: 25px;
+}
 
-    input::placeholder {
-        font-family: "Quicksand Regular";
-        color: rgb(51, 51, 51);
-    } */
+input::placeholder {
+    font-family: "Quicksand";
+    color: #333333;
+    font-weight: 400;
+    font-size: 15px;
+}
