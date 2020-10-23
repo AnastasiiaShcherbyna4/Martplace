@@ -1,66 +1,102 @@
 <header>
 
-    <div class="header--grey">
+    <div class="header__inner bg-gray">
+
         <div class="container">
 
-            <div class="header__logo">
-                Mart<span class="header__logo--blue">Place</span>
-            </div>
+            <div class="header__top">
 
-            <button class="header__button">
-                Become a Seller
-            </button>
+                <a href="#" class="header__logo">
+                    <img src="../images/logo.png" alt="">
+                </a>
 
-            <div class="header__flex__container">
+                <a href="#" class="header__link">
+                    Become a Seller
+                </a>
 
                 <div class="header__icons">
-                    <div class="header__icon1">
+
+                    <a href="#" class="header__icon">
                         <span class="lnr lnr-alarm"></span>
-                    </div>
+                        <span class="header__counter header__counter--red">25</span>
+                    </a>
 
-                    <div class="header__icon2">
+                    <a href="#" class="header__icon">
                         <span class="lnr lnr-envelope"></span>
-                    </div>
+                        <span class="header__counter header__counter--green">6</span>
+                    </a>
 
-                    <div class="header__icon3">
+                    <a href="#" class="header__icon">
                         <span class="lnr lnr-cart"></span>
+                        <span class="header__counter header__counter--blue">2</span>
+                    </a>
+
+                </div>
+
+                <a href="#" class="user">
+                    <span class="user__avatar" style="background-image: url(../images/avatar.png);"> </span>
+                    <div class="user__info">
+                        <span class="user__name">
+                            Taofiq Hakim
+                        </span>
+                        <span class="user__balance">
+                            $20.45
+                        </span>
                     </div>
-                </div>
-
-                <div class="header__img">
-                </div>
+                </a>
 
             </div>
 
-
-            <div class="header__user__content">
-                <div class="header__user__content__name">
-                    Taofiq Hakim
-                </div>
-                <div class="header__user__content__money">
-                    $20.45
-                </div>
-            </div>
         </div>
-    </div>
-
-    <div class="container">
-        <div class="header__menu">
-            <div class="header__menu__item">HOME
-            </div>
-            <div class="header__menu__item">all products</div>
-            <div class="header__menu__item">wordpress</div>
-            <div class="header__menu__item">festures</div>
-            <div class="header__menu__item">Pages</div>
-        </div>
-
-        <form class="header__form">
-            <p><input type="search" placeholder="Search product here..."></p>
-            <span class="lnr lnr-magnifier"></span>
-        </form>
 
     </div>
 
+    <div class="header__inner">
+
+        <div class="container">
+
+            <div class="header__bottom">
+
+                <nav class="header__nav">
+                    <ul class="menu">
+
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">home</a>
+                        </li>
+
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">all products</a>
+                        </li>
+
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">wordpress</a>
+                        </li>
+
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">features</a>
+                        </li>
+
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">pages</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="header__search">
+                    <form action="" class="form header__form">
+                        <label>
+                            <input type="search" class="header__search-input" placeholder="Search product here...">
+                        </label>
+                        <button class="header__search-button"></button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
 </header>

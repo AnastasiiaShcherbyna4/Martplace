@@ -1,44 +1,35 @@
 @font-face {
-    font-family: 'Quicksand Light';
-    src: url("../fonts/quicksandlight.ttf") format('truetype');
-    src: url("../fonts/quicksandlight.woff") format('woff');
-    src: url("../fonts/quicksandlight.woff2") format('woff2');
+    font-family: 'Quicksand';
+    src: url("../fonts/quicksandlight.woff2") format('woff2'),
+        url("../fonts/quicksandlight.woff") format('woff');
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Quicksand Italic';
-    src: url("../fonts/quicksandbolditalic.ttf") format('truetype');
-    src: url("../fonts/quicksanditalic.woff") format('woff');
-    src: url("../fonts/quicksandlightitalic.woff2") format('woff2');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Quicksand Regular';
-    src: url("../fonts/quicksandregular.ttf") format('truetype');
-    src: url("../fonts/quicksandregular.woff") format('woff');
-    src: url("../fonts/quicksandregular.woff2") format('woff2');
-        font-weight: 400;
+    font-family: 'Quicksand';
+    src: url("../fonts/quicksandregular.woff2") format('woff2'),
+        url("../fonts/quicksandregular.woff") format('woff');
+    font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Quicksand Bold';
-    src: url("../fonts/quicksandbold.ttf") format('truetype');
-    src: url("../fonts/quicksandbold.woff") format('woff');
-    src: url("../fonts/quicksandbold.woff2") format('woff2');
+    font-family: 'Quicksand';
+    src: url("../fonts/quicksandbold.woff2") format('woff2'),
+        url("../fonts/quicksandbold.woff") format('woff');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Quicksand Bold Italic';
-    src: url("../fonts/quicksandbolditalic.ttf") format('truetype');
-    src: url("../fonts/quicksandbolditalic.woff") format('woff');
-    src: url("../fonts/quicksandbolditalic.woff2") format('woff2');
-        font-weight: 700;
-    font-style: italic;
+    font-family: 'Quicksand';
+    src: url("../fonts/Quicksand-Medium.woff2") format('woff2'),
+        url("../fonts/Quicksand-Medium.woff") format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }

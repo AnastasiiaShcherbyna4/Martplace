@@ -36,3 +36,43 @@ button:focus,
 input:focus {
   outline: transparent;
 }
+
+.bg-gray {
+  background-color: #eef1f3;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.menu {
+  &__item{
+
+  }
+
+  &__link{
+    &:hover {
+
+    }
+  }
+}
+
+.user {
+&__avatar {
+
+}
+&__info {
+
+}
+&__name {
+
+}
+&__balance {
+  
+}
+}
+
+
