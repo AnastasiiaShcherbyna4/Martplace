@@ -12,11 +12,11 @@ let gulp = require("gulp"),
 	include = require("gulp-file-include"), //импорт одних файлов в другие (работает с HTML, SCSS/CSS и JS, но нужен он нам в основном для импорта HTML)
 	browserSync = require("browser-sync"), //сервер для отображения в браузере в режиме реального времени
 	rename = require("gulp-rename"), //переименовывает файлы, добавляет им префиксы и суффиксы
-	imagemin = require("gulp-imagemin"), //пережимает изображения
+	/* imagemin = require("gulp-imagemin"), //пережимает изображения
 	recompress = require("imagemin-jpeg-recompress"), //тоже пережимает, но лучше. Плагин для плагина
 	pngquant = require("imagemin-pngquant"),
 	webp = require('gulp-webp'),
-	webphtml = require('gulp-webp-html'),
+	webphtml = require('gulp-webp-html'), */
 	// webpcss = require("gulp-webpcss"),
 	uglify = require("gulp-uglify"), //то же, что cssmin, только для js
 	concat = require("gulp-concat"), //склеивает css и js-файлы в один
@@ -98,6 +98,7 @@ gulp.task("style", function () {
 		.src([
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
+			"node_modules/linearicons/dist/web-font/style.css"
 		])
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
 		.pipe(cssmin()) //минифицируем полученный файл
@@ -157,7 +158,6 @@ gulp.task("html", function () {
 				basepath: "@file",
 			}),
 		)
-		.pipe(webphtml())
 		.pipe(gulp.dest("build/"))
 		.pipe(size())
 		.pipe(
@@ -236,7 +236,7 @@ gulp.task("images", function () {
 	return gulp
 		.src("src/images/**/*.+(png|jpg|jpeg|gif|svg|ico|webp)")
 		.pipe(size())
-		.pipe(
+		/* .pipe(
 			imagemin(
 				[
 					recompress({
@@ -252,7 +252,7 @@ gulp.task("images", function () {
 					imagemin.svgo(),
 				],
 			),
-		)
+		) */
 		.pipe(gulp.dest("build/images"))
 		.pipe(
 			browserSync.reload({
@@ -262,22 +262,7 @@ gulp.task("images", function () {
 		.pipe(size());
 });
 
-gulp.task("webp", function () {
-	return gulp
-		.src("src/images/**/*.+(png|jpg|jpeg|gif|svg|ico|webp)")
-		.pipe(size())
-		.pipe(webp({
-			quality: 75,
-			method: 6,
-		}))
-		.pipe(gulp.dest("build/images"))
-		.pipe(
-			browserSync.reload({
-				stream: true,
-			}),
-		)
-		.pipe(size())
-});
+
 
 gulp.task("deletefonts", function () {
 	//задачи для очистки директории со шрифтами в build. Нужна для того, чтобы удалить лишнее.
@@ -298,7 +283,7 @@ gulp.task("watch", function () {
 		gulp.parallel("font-woff", "font-woff2", "font-eot"),
 	);
 	gulp.watch("src/js/**/*.js", gulp.parallel("minjs", "js"));
-	gulp.watch("src/images/**/*.*", gulp.parallel("images", "webp"));
+	gulp.watch("src/images/**/*.*", gulp.parallel("images"));
 });
 
 gulp.task("deploy", function () {
