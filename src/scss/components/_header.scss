@@ -1,7 +1,7 @@
 .header {
 
     &__top {
-        height: 100px;
+        min-height: 100px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -13,14 +13,23 @@
 
     &__link {
         background-color: #0674ec;
-        width: 140px;
-        height: 36px;
+        padding: 10px 20px;
         color: #fff;
-        font-family: 'Quicksand';
         font-size: 14px;
         text-align: center;
-        border-radius: 22px;
-        padding-top: 10px;
+        border-radius: 29px;
+
+        &:focus {
+            font-weight: 900;
+        }
+
+        &:active {
+            font-size: 16px;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 
     &__icons {
@@ -28,21 +37,33 @@
     }
 
     &__icon-first {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin: 0 30px;
     }
 
     &__counter {
         color: white;
-        border-radius: 50%;
+        border-radius: 14px;
         position: absolute;
         text-align: center;
-        width: 22px;
-        height: 22px;
         font-size: 14px;
-        font-weight: 700;
-        font-family: "Quicksand";
-        padding: 3px;
+        font-weight: 500;
+        padding: 4px 7px;
+        top: -18px;
+
+        &--red {
+            background-color: rgb(255, 106, 108);
+            left: 10px;
+        }
+
+        &--green {
+            background-color: #62d03b;
+            left: 13px;
+        }
+
+        &--blue {
+            background-color: $blue;
+            left: 15px;
+        }
     }
 
     &__icon {
@@ -50,46 +71,29 @@
         position: relative;
     }
 
-    &__counter--red {
-        background-color: rgb(255, 106, 108);
-        top: -18px;
-        left: 10px;
-    }
-
-    &__counter--green {
-        background-color: #62d03b;
-        top: -18px;
-        left: 13px;
-    }
-
-    &__counter--blue {
-        background-color: #0674ec;
-        top: -18px;
-        left: 15px;
-    }
-
     &__bottom {
-        height: 80px;
+        min-height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    &__search-button {
-        background-color: #0674ec;
-        width: 70px;
-        border-radius: 22px;
-        height: 46px;
-        font-size: 15px;
-        border-color: transparent;
-        font-size: 15px;
-        line-height: 2;
-        padding-top: 10px;
-        position: absolute;
-        right: 15px;
+    &__search {
+        position: relative;
     }
 
-    &__search-button>.lnr {
+    &__search-button {
+        background-color: #0674ec;
+        border-radius: 29px;
+        font-size: 15px;
+        height: 44px;
+        width: 70px;
+        border-color: transparent;
+        font-size: 15px;
+        position: absolute;
+    }
+
+    &__search-icon {
         color: #fff;
     }
 
@@ -100,7 +104,9 @@
     }
 }
 
-.lnr {
+.lnr-alarm,
+.lnr-envelope,
+.lnr-cart {
     color: rgb(126, 143, 161);
     font-size: 20px;
 }
@@ -117,17 +123,12 @@
     }
 
     &__name {
-        font-size: 16px;
-        font-family: "Quicksand";
         color: #333333;
         font-weight: 700;
     }
 
     &__balance {
         color: #0674ec;
-        font-size: 16px;
-        font-family: "Quicksand";
-        font-weight: 400;
         text-align: left;
         padding-right: 46px;
         padding-top: 5px;
@@ -136,14 +137,12 @@
     &__avatar {
         width: 50px;
         height: 50px;
-        margin-right: 20px;
-        margin-left: 20px;
+        margin: 0 20px;
     }
 }
 
 .menu {
     font-size: 15px;
-    font-family: "Quicksand";
     color: #333333;
     text-transform: uppercase;
     display: flex;
@@ -157,25 +156,117 @@
         color: #333333;
         margin-right: 25px;
         font-weight: 700;
+
+        &:hover {
+            color: $blue;
+        }
+
+        &:active {
+            font-size: 20px;
+        }
     }
 }
 
-input[type=search] {
+.header__search-input {
     background-color: #fff;
     border: 1px, rgb(217, 223, 229), solid;
     border-radius: 20px;
-    width: 358px;
+    min-width: 358px;
     height: 44px;
     font-size: 15px;
-    font-family: "Quicksand";
     color: rgb(137, 143, 150);
     line-height: 2;
     padding-left: 25px;
 }
 
-input::placeholder {
-    font-family: "Quicksand";
+.header__search-input::placeholder {
     color: #333333;
-    font-weight: 400;
     font-size: 15px;
+}
+
+/* Не подключился файл _hero-section.scss поэтому пока тут стили написала */
+
+.hero {
+    &__top {
+        color: $white;
+        text-align: center;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    &__title {
+        text-transform: capitalize;
+        padding-top: 180px;
+        font-size: 60px;
+    }
+
+    &__title-bold {
+        font-weight: 500;
+    }
+
+    &__text-white {
+        font-weight: 500;
+        font-size: 20px;
+        padding-top: 35px;
+    }
+
+    &__btns {
+        margin-top: 70px;
+    }
+
+    &__btn {
+        margin: 0 15px;
+        border: 1px solid $white;
+        color: $white;
+
+        &:hover {
+            background-color: $white;
+            color: #0674ec;
+        }
+    }
+
+    &__search-btn {
+        background-color: #0674ec;
+        padding: 10px 25px;
+        border-radius: 10px;
+    }
+
+    &__flex {
+        &-direction {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            color: $dark;
+            margin-top: 190px;
+
+            &-item {
+                min-width: 361px;
+                min-height: 403px;
+
+                &:hover {
+                    border-radius: 4px;
+                    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+                }
+            }
+        }
+
+        &-img {
+            padding-bottom: 35px;
+        }
+
+        &-title {
+            margin-bottom: 25px;
+            color: black;
+            font-size: 25px;
+        }
+
+        &-text {
+            line-height: 1.875;
+        }
+
+        &-direction-item {
+            margin: 0 20px;
+        }
+    }
 }
