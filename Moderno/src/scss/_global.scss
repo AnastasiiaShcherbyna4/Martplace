@@ -29,7 +29,9 @@ h6 {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
+  color: $text;
 }
 
 button:focus,
@@ -38,14 +40,45 @@ input:focus {
 }
 
 body {
-  margin: 0;
-  font-family: Quicksand, sans-serif;
-  font-size: 16px;
-  line-height: 1;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: $text;
   font-weight: 400;
-  overflow-x: hidden;
-  min-width: 320px;
-  background-color: #fff;
-  font-style: normal;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid {
+  min-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media (max-width:720px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+}
+
+.title {
+  color: $bg;
+  @include f700;
+  font-size: 36px;
+  text-align: center;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.rate-star {
+  display: inline-block;
+  margin-right: 13px;
+}
+
+li {
+  font-family: 'Roboto', sans-serif;
+}
